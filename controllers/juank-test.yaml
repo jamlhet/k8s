@@ -8,11 +8,11 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: juank-app
+      tier: backend
   template:
     metadata:
       labels:
-        app: juank-app
+        tier: backend
     spec:
       containers:
       - name: juank-app
