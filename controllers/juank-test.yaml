@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: juank-test
+  name: juank-test-deployment
   labels:
-    app: springApp
+    app: juank-test
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
-      app: springApp
+      app: juank-test
   template:
     metadata:
       labels:
-        app: springApp
+        app: juank-test
     spec:
       containers:
-      - name: springApp
+      - name: juank-test
         image: jamlhet/gs-spring-boot-docker
         ports:
         - containerPort: 10080
