@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: juank-test-deployment
+  name: nginx-deployment
   labels:
-    app: juank-test
+    app: nginx
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
-      app: juank-test
+      app: nginx
   template:
     metadata:
       labels:
-        app: juank-test
+        app: nginx
     spec:
       containers:
-        name: juank-test
-        image: jamlhet/gs-spring-boot-docker
+      - name: nginx
+        image: nginx:1.7.9
         ports:
-          containerPort: 10080
+        - containerPort: 80
