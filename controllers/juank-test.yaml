@@ -15,7 +15,7 @@ spec:
         app: juank-test
     spec:
       containers:
-      - name: juank-test
+        name: juank-test
         image: jamlhet/gs-spring-boot-docker
         ports:
-        - containerPort: 10080
+          containerPort: 10080
