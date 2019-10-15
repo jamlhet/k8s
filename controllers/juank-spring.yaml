@@ -8,18 +8,16 @@ spec:
   selector:
     matchLabels:
       app: springApp
-      role: master
       tier: backend
-  replicas: 1
+  replicas: 4
   template:
     metadata:
       labels:
         app: springApp
-        role: master
         tier: backend
     spec:
       containers:
-      - name: master
+      - name: springApp
         image: jamlhet/gs-spring-boot-docker
         resources:
           requests:

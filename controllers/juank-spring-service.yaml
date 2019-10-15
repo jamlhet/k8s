@@ -7,11 +7,10 @@ metadata:
     role: master
     tier: backend
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 10080
   selector:
-    app: springApp
-    role: master
+    app: springApp    
     tier: backend
