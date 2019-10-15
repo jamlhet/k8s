@@ -1,10 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-master
+  name: springboot-app-service
   labels:
-    app: springApp
-    role: master
+    app: springboot-app
     tier: backend
 spec:
   type: LoadBalancer
@@ -12,5 +11,5 @@ spec:
   - port: 80
     targetPort: 10080
   selector:
-    app: springApp    
+    app: role: master
     tier: backend
