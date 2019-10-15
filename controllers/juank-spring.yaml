@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-master
+  name: springboot-app-deployment
   labels:
-    app: springApp
+    app: springboot-app
 spec:
   selector:
     matchLabels:
-      app: springApp
+      app: springboot-app
       tier: backend
   replicas: 4
   template:
     metadata:
       labels:
-        app: springApp
+        app: springboot-app
         tier: backend
     spec:
       containers:
-      - name: springApp
+      - name: springboot-app
         image: jamlhet/gs-spring-boot-docker
         resources:
           requests:
